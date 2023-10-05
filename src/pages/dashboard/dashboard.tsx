@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   return (
     <div style={Styles.restaurantListing}>
-      <h1>Restaurants Near You</h1>
+      <h1>Restaurants Near You 1</h1>
       <div style={Styles.restaurantCards}>
         {restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} data={restaurant} />
