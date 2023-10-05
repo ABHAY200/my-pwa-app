@@ -20,11 +20,13 @@ function App() {
 
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
+  console.log('beforeinstallprompt');
   deferredPrompt = e;
   // Show install button or prompt here
 });
 
-const handleInstallButtonClick = () => {console.log('deferredPrompt', deferredPrompt);
+const handleInstallButtonClick = () => {
+  console.log('deferredPrompt', deferredPrompt);
   if (deferredPrompt) {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult) => {
